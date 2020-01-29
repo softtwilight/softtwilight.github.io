@@ -51,3 +51,49 @@ offset 很像 log sequence number。
 #### 硬盘使用
 不会无限制的写log，一般会清除很久的segment，如果consumer消费落后很多很多，是有可能丢消息的。
 
+## DataBase and Stream
+### Keep System in Sync
+database， cache， search index, data warehouse. 复杂应用会用到这些存储数据，保证数据的Sync。
+batch process。 也可以双写。 双写可能会存在不一致的情况。A1 B1 B2 A2， 可能A B 写 系统 1 2 的操作顺序会是这样， 找出1 2 系统数据不一致。
+同时写两个系统也会有atomic commit的问题，是very expensive的。
+
+### Change Data Capture
+观察到数据的变化，并将变化以一定的形式发送给别的系统。
+压缩日志。(同一条数据的多次操作，只保留最新的，效果类似于snapshot)
+
+### Event Source
+DDD(domain-driven design的概念)，将所有的变化封装为一个change event。关注事件本身，而不是事件产生的结果。
+用户一般期待的是现在的状态，所以只有记录时不够的。比如大家只会关心购物网站上剩余的口罩数，而不是关心上架和已销售数目。
+一般用event sourcing的应用都要保存一些时间点的snap-shot，这样不用读取所有的event 历史。
+
+### State, Streams, and Immutability
+当前状态时event stream的积分。（人生是不是也是这样。。。
+event sourcing最大的缺点时异步的，写之后可能读到的还是旧数据。
+
+## Processing Message
+restart a task and sort 不现实， stream 是endless的
+
+### use of Stream processing
+
+### Reasoning About time
+会经常使用time window， 类似最近5分钟的平均流量。"最近5分钟"比看起来更复杂一些。
+看event中的timestamp（决定性的 和 系统时间 （简单，需要event发生的时间和处理时间很小
+
+如果用event 时间， 有一个问题是，你不知道在一个windows里面，是不是还有别的event。（如果一段时间没收到，就认为完成，再来的就忽视或者发布一个更正）。
+采集多个timestamp， event 发生的时间， client发送的时间， server 接受的时间
+
+type of windows: //for aggregations
+- Tumbling windows(翻滚), fixed length, 一个event只属于一个window 1- 2, 2-3, 3-4 ... 
+- hopping windows(跳跃)，fixed length, 但是允许overlap，目的是统计更平顺。1-5， 2-6， 3-7...
+- sliding windows, 某个时间长度范围内发生的所有事件， 1.5-2.5... 将事件放入一个buffer， 然后移除过期的事件， buffer内的就是过期时间范围内所有的事件了。
+- session windows, 没有固定事件，记录用户一次登录的所有事件。
+
+### Stream join
+
+#### stream-stream join
+搜索stream 和 点击 steam join，获得搜索质量评估的stream
+
+### Fault Tolerance
+exactly-once processing
+
+- microbatch and checkpoint 如果涉及周边系统，回到checkpoint点还是会有问题
