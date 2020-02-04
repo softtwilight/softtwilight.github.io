@@ -2,8 +2,8 @@
 # Site settings
 title: 
 email: 
-baseurl: "/blog/" # the subpath of your site, e.g. /blog/
-url: "https://softtwilight.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://softtwilight.github.io/" # the base hostname & protocol for your site
 
 markdown: kramdown
 # toc_levels: 1……2
