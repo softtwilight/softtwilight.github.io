@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://softtwilight.github.io/" # the base hostname & protocol for your site
 
 markdown: kramdown
+future: true
 # toc_levels: 1……2
 
 # paginate: 10
