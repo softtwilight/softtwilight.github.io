@@ -7,4 +7,9 @@ categories: Java
 
 #Hello World!
 
-你好，豆豆！
+你好！
+
+我是一张图片：
+![Our photo](/img/us.png)
+
+## 1. 我是标题
