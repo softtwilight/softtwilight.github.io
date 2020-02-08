@@ -26,7 +26,8 @@ body {
     width: $sidebarWidth;
     @include transition(all 1s ease);
     @include box-shadow(-3px 0px 10px $deepgrey);
-    background: $darkblue;
+    //background: $darkblue;
+    background: #14436A
   }
 
   #page-content-wrapper {
@@ -41,7 +42,8 @@ body {
     border: 2px solid $white;
     z-index: 1001;
     background: grey;
-  }
+    }
+  
 
   /* toggled style */
   body.toggled {
@@ -108,15 +110,16 @@ div#sidebar-wrapper {
   
   a.nav-link {
     background-color: transparent;
-    color: $lightgrey;
+    //color: $lightgrey;
+    color: #DE7C2C;
     font-size: 16px;
     cursor: pointer;
 
     &.active {
       background: transparent;
       border-radius: 0px;
-      color: $orange;
-      border-bottom: 1px solid $orange;
+      color: #DE7C2C;
+      border-bottom: 1px solid #DE7C2C;
     }
   }
 }

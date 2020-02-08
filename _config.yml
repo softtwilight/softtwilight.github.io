@@ -7,6 +7,7 @@ url: "https://softtwilight.github.io/" # the base hostname & protocol for your s
 
 markdown: kramdown
 future: true
+github_username:  softtwilight
 # toc_levels: 1……2
 
 # paginate: 10
