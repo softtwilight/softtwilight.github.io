@@ -43,15 +43,15 @@
   text-overflow: ellipsis;
 }
 
-// div#recentComments {
-//   font-size: smaller;
-//   line-height: 20px;
-//   opacity: 0;
-//   transition: all 1s ease;
-//   &.show{
-//     opacity: 1;
-//   }
-// }
+div#recentComments {
+  font-size: smaller;
+  line-height: 20px;
+  opacity: 0;
+  transition: all 1s ease;
+  &.show{
+    opacity: 1;
+  }
+}
 
 div.headshot img {
   width: 250px!important;
