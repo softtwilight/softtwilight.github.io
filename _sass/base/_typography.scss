@@ -51,6 +51,16 @@ a {
   }
 }
 
+blockquote {
+  border-left: 5px solid $grey;
+  padding: 5px 5px;
+  margin: 0 0 0;
+  color: $dark;
+  p {
+    margin: 0rem 0rem 1rem 0.2rem;
+  }
+}
+
 hr {
   height: 1px;
   background: $border;
@@ -58,7 +68,8 @@ hr {
 }
 
 em {
-  font-style: italic;
+  display: block;
+  color: $grey;
 }
 
 abbr[title] {
@@ -98,7 +109,7 @@ pre {
     color: $code-text-color;
     word-break: normal;
     white-space: pre;
-    background: transparent;
+    background: #6495ED;
     border: 0;
   }
 }

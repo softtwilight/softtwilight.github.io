@@ -211,18 +211,18 @@ gulp.task( "serve", function() {
 
 gulp.task( "styles", gulp.series( [ "sass", "critical" ] ) );
 
-gulp.task( "watch", () => {
-  gulp.watch( "_sass/**/*.scss", gulp.series( "styles" ) );
-  gulp.watch( [
-    "*.html",
-    "_layouts/*.html",
-    "_includes/*.html",
-    "_posts/*.md",
-    "pages_/*.md",
-    "_include/*html"
-  ], gulp.series( "rebuild" ) );
-  gulp.watch( "_js/**/*.js", gulp.series( "js" ) );
-} );
+// gulp.task( "watch", () => {
+//   gulp.watch( "_sass/**/*.scss", gulp.series( "styles" ) );
+//   gulp.watch( [
+//     "*.html",
+//     "_layouts/*.html",
+//     "_includes/*.html",
+//     "_posts/*.md",
+//     "pages_/*.md",
+//     "_include/*html"
+//   ], gulp.series( "rebuild" ) );
+//   gulp.watch( "_js/**/*.js", gulp.series( "js" ) );
+// } );
 
 gulp.task( "build", gulp.series( [
   "clean",
