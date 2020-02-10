@@ -5,9 +5,13 @@ permalink: /contact/
 ---
 
 
-### Example Formspree contact form with validation and reCaptcha
+## 谢谢你的联系！
 
-Fill in the form or [email me](mailto:{{site.email}}) to discuss your next project.
+---
+---
+[给我发邮件](mailto:{{site.email}}).  
+
+或者通过下面的方式给我发消息（请填写上你的`email`），我会认真回复的😁。
 
 {% include form.html %}
 
