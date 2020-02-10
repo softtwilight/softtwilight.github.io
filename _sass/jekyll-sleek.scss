@@ -2,37 +2,37 @@
 
 // 1. Configuration and helpers
 @import
-  "abstracts/_variables",
-  "abstracts/_mixins";
+  "abstracts/variables",
+  "abstracts/mixins";
 
 // 2. Vendors
 @import
-  "vendor/_normalize";
+  "vendor/normalize";
 
 // 3. Base
 @import
-  "base/_base",
-  "base/_typography",
-  "base/_helpers";
+  "base/base",
+  "base/typography",
+  "base/helpers";
 
 // 4. Layout
 @import
-  "layout/_grid",
-  "layout/_nav",
-  "layout/_footer";
+  "layout/grid",
+  "layout/nav",
+  "layout/footer";
 
 // 5. Components
 @import
-  "components/_btn",
-  "components/_card",
-  "components/_label",
-  "components/_pagination",
-  "components/_form",
-  "components/_modal",
-  "components/_table",
-  "components/_syntax";
+  "components/btn",
+  "components/card",
+  "components/label",
+  "components/pagination",
+  "components/form",
+  "components/modal",
+  "components/table",
+  "components/syntax";
 
 // 6. Page-specific styles
 @import
-  "pages/_page",
-  "pages/_post";
+  "pages/page",
+  "pages/post";
