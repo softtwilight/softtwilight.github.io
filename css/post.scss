@@ -22,7 +22,8 @@ div#reading-progress {
 
 div#post-content {
   @media (min-width: 1024px) {
-    width: 70vw;
+    // 阅读页面宽度
+    width: 50vw;
   }
   @media (min-width: 1200px) {
     text-shadow: 0.0px 0.0px 0px black !important;

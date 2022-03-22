@@ -4,7 +4,7 @@
       containerID : "archivelist",
       previous: "Preivous",
       next: "Next",
-      perPage: 8
+      perPage: 20 
     });
   }
   function initSearchBar(){
